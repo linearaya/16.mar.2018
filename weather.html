@@ -22,9 +22,9 @@
 			<h2>En todo el mundo</h2>
 			<p>El <a href="https://openweathermap.org/api" target="_blank">OpenWeatherMap</a> me entrega el tiempo atmosférico actual de cualquier parte del mundo. Ese tiempo se puede consultar directamente, como un dato duro, gracias a una <a href="https://openweathermap.org/api" target="_blank">API</a>. Les recomiendo NO abusar del "refresh" de su página, porque cada vez que lo hagan la API va a contar y eventualmente se aburrirá de tanta consulta.</p>
 			<p>Para hacer una consulta específica corresponde ir a buscar un recursos particular, que se estructura de la siguiente manera:</p>
-			<pre><code>http://api.openweathermap.org/data/2.5/weather?q=CIUDAD&units=metric&appid=APIKey', true</code></pre>
+			<pre><code>https://api.openweathermap.org/data/2.5/weather?q=CIUDAD&units=metric&appid=APIKey', true</code></pre>
 			<p>En el caso de que quiera preguntar por el tiempo en Tokio, tengo que escribir lo siguiente:</p>
-			<pre><code>http://api.openweathermap.org/data/2.5/weather?q=Tokyo&units=metric&appid=1111111111</code></pre>
+			<pre><code>https://api.openweathermap.org/data/2.5/weather?q=Tokyo&units=metric&appid=1111111111</code></pre>
 			<p>¿Cuál es el origen del dato? Si lo georreferenciamos, es:</p>
 			<div id="mapid" style="width: 400px;  height: 400px; margin-bottom: 20px;"></div>
 			<p>Un par de aclaraciones necesarias:</p>
@@ -47,7 +47,7 @@
 </div>
 <script>
 var request = new XMLHttpRequest();
-request.open('GET', 'http://api.openweathermap.org/data/2.5/weather?q=Linares&units=metric&appid=823c5b113fb03562cbfbabb1402fe7f2', true);
+request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=Linares&units=metric&appid=823c5b113fb03562cbfbabb1402fe7f2', true);
 request.onload = function () {
   var data = JSON.parse(this.response);
   var lat = data.coord.lat;
